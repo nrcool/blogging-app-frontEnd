@@ -17,7 +17,7 @@ export default function Container({children}) {
         localdata && setIsRegister(true)
         const token = localStorage.getItem("token")
          if(token){
-            fetch("https://blogs-app-server-r8ko24yka-nrcool.vercel.app/verifytoken",{method:"GET", headers:{"token":token}})
+            fetch("https://blogs-app-server.vercel.app/verifytoken",{method:"GET", headers:{"token":token}})
             .then(res=>res.json())
             .then(result=>{
                 console.log(result)

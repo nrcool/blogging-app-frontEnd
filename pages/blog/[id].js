@@ -10,8 +10,8 @@ export default function Blog(props) {
   const { user } = useContext(MyContext);
   const { data, error } = SWR(
     {
-      url: `https://blogs-app-server-r8ko24yka-nrcool.vercel.app/blogs/${query.id}`,
-      url2: `https://blogs-app-server-r8ko24yka-nrcool.vercel.app/comments`,
+      url: `https://blogs-app-server.vercel.app/blogs/${query.id}`,
+      url2: `https://blogs-app-server.vercel.app/comments`,
     },
     async ({ url, url2 }) => {
       const res = await fetch(url);
@@ -37,7 +37,7 @@ export default function Blog(props) {
       userid: user._id,
       blogid: data.blog._id,
     });
-    fetch(`https://blogs-app-server-r8ko24yka-nrcool.vercel.app/comments`, {
+    fetch(`https://blogs-app-server.vercel.app/comments`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ export default function Blog(props) {
 
   /* const replyOnComment = (id) => {
     console.log(replyTextRef);
-    fetch(`https://blogs-app-server-r8ko24yka-nrcool.vercel.app//comments`, {
+    fetch(`https://blogs-app-server.vercel.app//comments`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

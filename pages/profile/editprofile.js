@@ -12,7 +12,7 @@ const router=useRouter()
     e.preventDefault();
     const formdata = new FormData(e.target);
 
-    fetch(`https://blogs-app-server-r8ko24yka-nrcool.vercel.app/users/${user._id}`, {
+    fetch(`https://blogs-app-server.vercel.app/users/${user._id}`, {
       method: "PATCH",
       headers: { token: localStorage.getItem("token") },
       body: formdata,

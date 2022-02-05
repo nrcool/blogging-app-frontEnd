@@ -2,7 +2,7 @@ import useSWR from "swr"
 
 export default function Records(props) {
 
-    const {data,error} = useSWR("https://blogs-app-server-r8ko24yka-nrcool.vercel.app/users", async (url)=>{
+    const {data,error} = useSWR("https://blogs-app-server.vercel.app/users", async (url)=>{
         const res = await fetch(url,{method:"GET", headers:{"token":localStorage.getItem("token")}})
         const result = await res.json()
         return result.data
@@ -17,7 +17,7 @@ if(error){
 }
 
 const deleteUser=(id)=>{
-  fetch(`https://blogs-app-server-r8ko24yka-nrcool.vercel.app/  users/${id}`,{method:"DELETE",headers:{"token":localStorage.getItem("token")}})
+  fetch(`https://blogs-app-server.vercel.app/  users/${id}`,{method:"DELETE",headers:{"token":localStorage.getItem("token")}})
   .then(res=>res.json())
   .then(result=>console.log(result))
 }

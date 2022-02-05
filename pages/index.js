@@ -5,7 +5,7 @@ import useSWR from "swr"
 
 export default function Blogs(props) {
 
-    const {data,error} = useSWR("https://blogs-app-server-r8ko24yka-nrcool.vercel.app/blogs", async (url)=>{
+    const {data,error} = useSWR("https://blogs-app-server.vercel.app/blogs", async (url)=>{
         const res = await fetch(url)
         const result = await res.json()
         return result.data

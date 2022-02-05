@@ -7,7 +7,7 @@ export default function DisplayComments({comments}){
 
     const [reply,setReply]=useState("")
     const replyOnComment = (id,blogid) => {
-        fetch(`https://blogs-app-server-r8ko24yka-nrcool.vercel.app/comments`, {
+        fetch(`https://blogs-app-server.vercel.app/comments`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

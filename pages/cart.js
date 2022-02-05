@@ -19,7 +19,7 @@ export default function Cart() {
             records:orderItems,
             userid:user._id
         }
-        fetch("https://blogs-app-server-r8ko24yka-nrcool.vercel.app/orders", {
+        fetch("https://blogs-app-server.vercel.app/orders", {
             method:"POST",
             headers:{"Content-Type":"application/json","token":localStorage.getItem("token")},
             body:JSON.stringify(order)

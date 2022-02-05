@@ -16,7 +16,7 @@ export default function Login() {
       email: e.target.email.value,
       password: e.target.password.value,
     };
-    fetch("https://blogs-app-server-r8ko24yka-nrcool.vercel.app/users/login", {
+    fetch("https://blogs-app-server.vercel.app/users/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
@@ -49,7 +49,7 @@ export default function Login() {
           rel="stylesheet"
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-          crossorigin="anonymous"
+    
         />
       </Head>
       <form onSubmit={loginUser}>

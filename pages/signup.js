@@ -9,7 +9,7 @@ const router = useRouter()
         e.preventDefault()
        const formdata=new FormData(e.target)
 
-        fetch("https://blogs-app-server-r8ko24yka-nrcool.vercel.app/users", {
+        fetch("https://blogs-app-server.vercel.app/users", {
             method:"POST",
             body:formdata
         })
@@ -38,7 +38,7 @@ const router = useRouter()
           rel="stylesheet"
           href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-          crossorigin="anonymous"
+        
         />
       </Head>
       <form onSubmit={registerUser}>
